@@ -6,8 +6,7 @@ Requires at least: 1.5
 Tested up to: 3.2.1
 Stable tag: 1.0
 
-Prezi makes ugly your presentation if embedded in your site, to save bandwidth and favor THEIR system, style and needs. To prevent a GIANT title blocking half of it, a nasty low-res thumbnail and waiting for a click to load, use this plugin in conjunction with Slidedynamic.com player
-
+Prezi makes ugly your presentation if embedded in your site, with a GIANT title blocking half of it, and a nasty low-res thumbnail. To fix it…
 == Description ==
 
 You won't realize how ugly a prezi presentation looks when embedded in your website until you actually invest hours, even days, in designing the ultimate presentation, learn all the basics and more, get the file to play in your site, and then… it hits you: Something is wrong and no matter what parameters you use for your embed it NEVER looks as nice as it does on prezi.com explore section.
@@ -51,6 +50,10 @@ If downloading it, go to your plugins dashboard panel and chose "Add New". There
 Install and activate.
 
 If you ever edited your .htaccess file, make sure your manually created rules are `outside` the #Wordpress markers, or they will be deleted. This is not for my plugin only but every time WordPress or other plugin saves its rules (e.g. changing permalink structure) it replaces everything between the `# BEGIN Wordpress` and `# END WordPress` comments.
+
+== Frequently Asked Questions ==
+Q: How do I upload my presentation?
+A: Use the code and player provided by Slidedynamic.com
 
 == Changelog ==
 
