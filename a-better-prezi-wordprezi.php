@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: A better prezi Wordprezi
-Plugin URI: http://SocialBlogsiteWebDesign.com/plugins/a-better-prezi-wordprezi
+Plugin Name: A better prezi - Wordprezi
+Plugin URI: http://SocialBlogsiteWebDesign.com/plugins/a-better-prezi
 Description: Prezi makes ugly your presentation if embedded in your site, to save bandwith and make titles read-able in thumbnails view. To prevent a GIANT title blocking half of it, a nasty lwo-res thumbnail and waiting for a click to load, this plugin…
 Version: 1.0
 Author: Sergio Zambrano
@@ -67,10 +67,13 @@ return "#Fix Prezi
 RewriteEngine On
 RewriteBase /
 Options +FollowSymlinks
-RewriteCond %{REQUEST_URI} !_prezi/
-RewriteRule ^.*testdynamic\.txt$ /_prezi/testdynamic.txt [R=301,L]
+
 RewriteCond %{REQUEST_URI} !_prezi/
 RewriteRule ^.*slidedynamic\.xml$ /_prezi/slidedynamic.xml [R=301,L]
+RewriteCond %{REQUEST_URI} !_prezi/
+RewriteRule ^.*textdynamic\.txt$ /_prezi/textdynamic.txt [R=301,L]
+RewriteCond %{REQUEST_URI} !_prezi/
+RewriteRule ^.*testdynamic\.txt$ /_prezi/testdynamic.txt [R=301,L]
 RewriteCond %{REQUEST_URI} !_prezi/
 RewriteRule ^.*content\.xml$ /_prezi/data/content.xml [R=301,L]
 RewriteCond %{REQUEST_URI} !_prezi/
@@ -78,11 +81,9 @@ RewriteRule ^.*data/fonts/(.*)$ /_prezi/data/fonts/$1 [R=301,L]
 RewriteCond %{REQUEST_URI} !_prezi/
 RewriteRule ^.*data/repo/(.*)$ /_prezi/data/repo/$1 [R=301,L]
 RewriteCond %{REQUEST_URI} !_prezi/
-RewriteRule ^.*prezi\.app(.*)$ /_prezi/preziapp$1 [R=301,L]
+RewriteRule ^.*prezi\.app(.*)/$ /_prezi/prezi.app/$1 [R=301,L]
 RewriteCond %{REQUEST_URI} !_prezi/
-RewriteRule ^.*movie.swf$ /_prezi/preziapp/Contents/Resources/movie.swf [R=301]
-RewriteCond %{REQUEST_URI} prezi.app
-RewriteRule ^.*prezi\.app(.*)$ /_prezi/preziapp$1 [R=301,L]
+RewriteRule ^.*movie.swf$ /_prezi/prezi.app/Contents/Resources/movie.swf [R=301,L]
 RewriteCond %{REQUEST_URI} !_prezi/
 RewriteRule ^.*data/main.swf$ /_prezi/data/main.swf [R=301,L]\n\n" . $rules;
 }
