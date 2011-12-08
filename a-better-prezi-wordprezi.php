@@ -2,8 +2,8 @@
 /*
 Plugin Name: A better prezi - Wordprezi
 Plugin URI: http://SocialBlogsiteWebDesign.com/plugins/a-better-prezi
-Description: Prezi makes ugly your presentation if embedded in your site, to save bandwith and make titles read-able in thumbnails view. To prevent a GIANT title blocking half of it, a nasty lwo-res thumbnail and waiting for a click to load, this pluginâ€¦
-Version: 1.0
+Description: Prezi makes ugly your presentation if embedded in your site, to save bandwith and make titles read-able in thumbnails view. To prevent a GIANT title blocking half of it, a nasty lwo-res thumbnail and waiting for a click to load, this plugin…
+Version: 1.1
 Author: Sergio Zambrano
 Author URI: http://SocialBlogsiteWebDesign.com/about
 License: GPL2
@@ -29,7 +29,7 @@ License: GPL2
 You won't realize how ugly a prezi presentation looks when embedded 
 in your website until you actually invest hours, even days, in designing
 the ultimate presentation, learn all the basics and more, get the file
-to play in your site, and thenâ€¦ it hits you: Something is wrong
+to play in your site, and then… it hits you: Something is wrong
 and no matter what parameters you use for your embed it NEVER looks
 as nice as it does on prezi.com explore section.
 
@@ -63,7 +63,7 @@ by using advanced apache redirection rules in your server.
 
 
 function find_prezi_anywhere( $rules ) {
-return "#Fix Prezi
+return "#BEGIN Fix Prezi
 RewriteEngine On
 RewriteBase /
 Options +FollowSymlinks
@@ -85,7 +85,8 @@ RewriteRule ^.*prezi\.app(.*)/$ /_prezi/prezi.app/$1 [R=301,L]
 RewriteCond %{REQUEST_URI} !_prezi/
 RewriteRule ^.*movie.swf$ /_prezi/prezi.app/Contents/Resources/movie.swf [R=301,L]
 RewriteCond %{REQUEST_URI} !_prezi/
-RewriteRule ^.*data/main.swf$ /_prezi/data/main.swf [R=301,L]\n\n" . $rules;
+RewriteRule ^.*data/main.swf$ /_prezi/data/main.swf [R=301,L]\n
+#END Fix Prezi\n\n" . $rules;
 }
 
 function prezi_flush_rewrites() {
