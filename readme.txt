@@ -4,7 +4,7 @@ Tags: prezi, presentation, player, flash, non-lineal, fly-through, embed, thumbn
 Donate link: http://socialblogsitewebdesign.com/wordpress_plugins/a-better-prezi-wordprezi/
 Requires at least: 1.5
 Tested up to: 3.2.1
-Stable tag: 1.0
+Stable tag: 1.1
 
 Prezi makes ugly your presentation if embedded in your site, with a GIANT title blocking half of it, and a nasty low-res thumbnail. To fix it…
 == Description ==
@@ -56,6 +56,10 @@ Q: How do I upload my presentation?
 A: Use the code and player provided by Slidedynamic.com
 
 == Changelog ==
+
+= 1.1.0 =
+
+BEGIN and END comments added to prevent other plugins re-adding these rules
 
 = 1.0.0 =
 
